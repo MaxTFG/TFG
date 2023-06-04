@@ -1,0 +1,2079 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			7:19 16" p.m., 06/04/2023
+                   on host:		"DESKTOP-I6LD473"
+Current Working Directory = "C:\Users\MAX2\Desktop\docking"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 8688, 1685899156.
+Docking parameter file (DPF) used for this docking:		C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 8688, 1685899156.
+DPF> ligand_types C NA OA N S HD          # atoms types in ligand
+
+DPF> fld receptor.maps.fld                # grid_data_file
+
+Opening Grid Map Dimensions file:		receptor.maps.fld
+Grid Point Spacing =				0.525 Angstroms
+
+Even Number of User-specified Grid Points =	40 x-points
+						40 y-points
+						40 z-points
+
+Coordinates of Central Grid Point of Maps =	(-18.345, 1.054, -1.049)
+Macromolecule file used to create Grid Maps =	receptor.pdbqt
+Grid Parameter file used to create Grid Maps =	C:/Users/MAX2/Desktop/docking/rigid1.gpf
+Minimum coordinates in grid = (-28.845, -9.446, -11.549)
+Maximum coordinates in grid = (-7.845, 11.554, 9.451)
+
+DPF> map receptor.C.map                   # atom-specific affinity map
+
+DPF> map receptor.NA.map                  # atom-specific affinity map
+
+DPF> map receptor.OA.map                  # atom-specific affinity map
+
+DPF> map receptor.N.map                   # atom-specific affinity map
+
+DPF> map receptor.S.map                   # atom-specific affinity map
+
+DPF> map receptor.HD.map                  # atom-specific affinity map
+
+DPF> elecmap receptor.e.map               # electrostatics map
+
+DPF> desolvmap receptor.d.map             # desolvation map
+
+DPF> move rigidligand.pdbqt               # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "rigidligand.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  0 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C1_1  and  O4_7 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C5_2  and  C6_73 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C2_4  and  O2_66 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C3_5  and  O3_71 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C4T_6  and  O4_76 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: O4_7  and  C4_8 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C5_9  and  C6_14 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C1T_11  and  O4_20 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C2_12  and  N_58 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C3_13  and  O3_64 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C6_14  and  O6_15 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: O6_15  and  S6_16 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: O4_20  and  C4_21 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C5_22  and  C6_27 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C1_24  and  O4_30 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C2_25  and  O2_51 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C3_26  and  O3_56 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: O4_30  and  C4_31 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C5_32  and  C6_37 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C2_35  and  N_43 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C3_36  and  O3_49 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: C6_37  and  O6_38 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: O6_38  and  S6_39 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: N_43  and  S2_45 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: O2_51  and  S2_52 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: N_58  and  S2_60 
+INPUT-LIGAND-PDBQT: REMARK       I    between atoms: O2_66  and  S2_67 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: ATOM      1  C1  IDO     1      57.945 -32.934 100.700  0.00  0.00     0.288 C 
+INPUT-LIGAND-PDBQT: ATOM      2  C5  IDO     1      57.214 -31.360  99.065  0.00  0.00     0.253 C 
+INPUT-LIGAND-PDBQT: ATOM      3  O5  IDO     1      56.951 -31.983 100.346  0.00  0.00    -0.298 OA
+INPUT-LIGAND-PDBQT: ATOM      4  C2  IDO     1      57.747 -34.148  99.766  0.00  0.00     0.242 C 
+INPUT-LIGAND-PDBQT: ATOM      5  C3  IDO     1      57.948 -33.734  98.385  0.00  0.00     0.194 C 
+INPUT-LIGAND-PDBQT: ATOM      6  C4T IDO     1      57.080 -32.468  98.063  0.00  0.00     0.197 C 
+INPUT-LIGAND-PDBQT: ATOM      7  O2  IDO     1      58.735 -35.064 100.110  0.00  0.00    -0.213 OA
+INPUT-LIGAND-PDBQT: ATOM      8  S2  IDO     1      58.272 -36.426 100.844  0.00  0.00     0.272 S 
+INPUT-LIGAND-PDBQT: ATOM      9  OS2 IDO     1      57.588 -37.288  99.892  0.00  0.00    -0.553 OA
+INPUT-LIGAND-PDBQT: ATOM     10  OS2 IDO     1      57.399 -36.051 101.903  0.00  0.00    -0.553 OA
+INPUT-LIGAND-PDBQT: ATOM     11  OS2 IDO     1      59.533 -36.962 101.411  0.00  0.00    -0.553 OA
+INPUT-LIGAND-PDBQT: ATOM     12  O3  IDO     1      57.620 -34.780  97.519  0.00  0.00    -0.360 OA
+INPUT-LIGAND-PDBQT: ATOM     13  HO3 IDO     1      56.699 -35.049  97.542  0.00  0.00     0.230 HD
+INPUT-LIGAND-PDBQT: ATOM     14  C6  IDO     1      58.552 -30.502  98.995  0.00  0.00     0.236 C 
+INPUT-LIGAND-PDBQT: ATOM     15  O62 IDO     1      58.479 -29.581  99.868  0.00  0.00    -0.626 OA
+INPUT-LIGAND-PDBQT: ATOM     16  O61 IDO     1      59.328 -30.654  98.021  0.00  0.00    -0.626 OA
+INPUT-LIGAND-PDBQT: ATOM     17  O4  IDO     1      57.211 -31.933  96.757  0.00  0.00    -0.360 OA
+INPUT-LIGAND-PDBQT: ATOM     18  HO4 IDO     1      58.150 -31.742  96.814  0.00  0.00     0.230 HD
+INPUT-LIGAND-PDBQT: ATOM     19  O4  GLC     2      57.721 -33.351 101.984  0.00  0.00    -0.326 OA
+INPUT-LIGAND-PDBQT: ATOM     20  C4  GLC     2      58.074 -32.392 102.991  0.00  0.00     0.176 C 
+INPUT-LIGAND-PDBQT: ATOM     21  C5  GLC     2      59.325 -32.967 103.736  0.00  0.00     0.179 C 
+INPUT-LIGAND-PDBQT: ATOM     22  O5  GLC     2      59.649 -32.097 104.841  0.00  0.00    -0.327 OA
+INPUT-LIGAND-PDBQT: ATOM     23  C1T GLC     2      58.620 -31.988 105.879  0.00  0.00     0.260 C 
+INPUT-LIGAND-PDBQT: ATOM     24  C2  GLC     2      57.313 -31.462 105.204  0.00  0.00     0.176 C 
+INPUT-LIGAND-PDBQT: ATOM     25  C3  GLC     2      56.927 -32.293 104.012  0.00  0.00     0.166 C 
+INPUT-LIGAND-PDBQT: ATOM     26  C6  GLC     2      60.634 -33.021 103.006  0.00  0.00     0.198 C 
+INPUT-LIGAND-PDBQT: ATOM     27  O6  GLC     2      60.930 -31.696 102.475  0.00  0.00    -0.235 OA
+INPUT-LIGAND-PDBQT: ATOM     28  S6  GLC     2      61.988 -31.629 101.361  0.00  0.00     0.252 S 
+INPUT-LIGAND-PDBQT: ATOM     29  OS6 GLC     2      62.224 -30.198 101.118  0.00  0.00    -0.572 OA
+INPUT-LIGAND-PDBQT: ATOM     30  OS6 GLC     2      61.366 -32.360 100.313  0.00  0.00    -0.572 OA
+INPUT-LIGAND-PDBQT: ATOM     31  OS6 GLC     2      63.203 -32.317 101.900  0.00  0.00    -0.572 OA
+INPUT-LIGAND-PDBQT: ATOM     32  N   GLC     2      56.218 -31.131 106.246  0.00  0.00    -0.279 N 
+INPUT-LIGAND-PDBQT: ATOM     33  HN  GLC     2      55.779 -31.947 106.696  0.00  0.00     0.176 HD
+INPUT-LIGAND-PDBQT: ATOM     34  S2  GLC     2      55.196 -29.949 106.007  0.00  0.00     0.205 S 
+INPUT-LIGAND-PDBQT: ATOM     35  OS2 GLC     2      56.027 -28.795 105.721  0.00  0.00    -0.578 OA
+INPUT-LIGAND-PDBQT: ATOM     36  OS2 GLC     2      54.420 -30.312 104.824  0.00  0.00    -0.578 OA
+INPUT-LIGAND-PDBQT: ATOM     37  OS2 GLC     2      54.428 -29.750 107.276  0.00  0.00    -0.578 OA
+INPUT-LIGAND-PDBQT: ATOM     38  O3  GLC     2      55.874 -31.747 103.305  0.00  0.00    -0.380 OA
+INPUT-LIGAND-PDBQT: ATOM     39  HO3 GLC     2      55.422 -31.226 103.973  0.00  0.00     0.211 HD
+INPUT-LIGAND-PDBQT: ATOM     40  O4  IDO     3      58.410 -33.285 106.426  0.00  0.00    -0.356 OA
+INPUT-LIGAND-PDBQT: ATOM     41  C4  IDO     3      59.518 -33.803 107.155  0.00  0.00     0.155 C 
+INPUT-LIGAND-PDBQT: ATOM     42  C5  IDO     3      59.566 -35.276 106.851  0.00  0.00     0.204 C 
+INPUT-LIGAND-PDBQT: ATOM     43  O5  IDO     3      60.569 -35.936 107.666  0.00  0.00    -0.347 OA
+INPUT-LIGAND-PDBQT: ATOM     44  C1  IDO     3      60.359 -35.831 109.109  0.00  0.00     0.239 C 
+INPUT-LIGAND-PDBQT: ATOM     45  C2  IDO     3      60.528 -34.373 109.430  0.00  0.00     0.193 C 
+INPUT-LIGAND-PDBQT: ATOM     46  C3  IDO     3      59.524 -33.486 108.661  0.00  0.00     0.145 C 
+INPUT-LIGAND-PDBQT: ATOM     47  C6  IDO     3      58.223 -36.074 106.856  0.00  0.00     0.187 C 
+INPUT-LIGAND-PDBQT: ATOM     48  O62 IDO     3      58.005 -36.945 105.961  0.00  0.00    -0.675 OA
+INPUT-LIGAND-PDBQT: ATOM     49  O61 IDO     3      57.387 -35.909 107.833  0.00  0.00    -0.675 OA
+INPUT-LIGAND-PDBQT: ATOM     50  O2  IDO     3      60.426 -34.111 110.848  0.00  0.00    -0.262 OA
+INPUT-LIGAND-PDBQT: ATOM     51  S2  IDO     3      61.697 -33.499 111.500  0.00  0.00     0.223 S 
+INPUT-LIGAND-PDBQT: ATOM     52  OS2 IDO     3      62.017 -32.338 110.671  0.00  0.00    -0.602 OA
+INPUT-LIGAND-PDBQT: ATOM     53  OS2 IDO     3      61.227 -33.062 112.862  0.00  0.00    -0.602 OA
+INPUT-LIGAND-PDBQT: ATOM     54  OS2 IDO     3      62.708 -34.517 111.608  0.00  0.00    -0.602 OA
+INPUT-LIGAND-PDBQT: ATOM     55  O3  IDO     3      59.811 -32.145 108.876  0.00  0.00    -0.409 OA
+INPUT-LIGAND-PDBQT: ATOM     56  HO3 IDO     3      60.768 -32.090 108.831  0.00  0.00     0.181 HD
+INPUT-LIGAND-PDBQT: ATOM     57  O4  GLC     4      61.376 -36.447 109.816  0.00  0.00    -0.319 OA
+INPUT-LIGAND-PDBQT: ATOM     58  C4  GLC     4      61.223 -37.848 109.773  0.00  0.00     0.183 C 
+INPUT-LIGAND-PDBQT: ATOM     59  C5  GLC     4      60.854 -38.404 111.193  0.00  0.00     0.183 C 
+INPUT-LIGAND-PDBQT: ATOM     60  O5  GLC     4      60.665 -39.839 111.007  0.00  0.00    -0.343 OA
+INPUT-LIGAND-PDBQT: ATOM     61  C1  GLC     4      61.887 -40.611 110.659  0.00  0.00     0.169 C 
+INPUT-LIGAND-PDBQT: ATOM     62  C2  GLC     4      62.364 -40.047 109.302  0.00  0.00     0.137 C 
+INPUT-LIGAND-PDBQT: ATOM     63  C3  GLC     4      62.566 -38.510 109.452  0.00  0.00     0.165 C 
+INPUT-LIGAND-PDBQT: ATOM     64  C6  GLC     4      59.572 -37.830 111.762  0.00  0.00     0.205 C 
+INPUT-LIGAND-PDBQT: ATOM     65  O6  GLC     4      59.598 -37.955 113.248  0.00  0.00    -0.228 OA
+INPUT-LIGAND-PDBQT: ATOM     66  S6  GLC     4      58.170 -38.475 113.772  0.00  0.00     0.259 S 
+INPUT-LIGAND-PDBQT: ATOM     67  OS6 GLC     4      57.863 -39.745 113.147  0.00  0.00    -0.565 OA
+INPUT-LIGAND-PDBQT: ATOM     68  OS6 GLC     4      58.381 -38.575 115.269  0.00  0.00    -0.565 OA
+INPUT-LIGAND-PDBQT: ATOM     69  OS6 GLC     4      57.223 -37.408 113.464  0.00  0.00    -0.565 OA
+INPUT-LIGAND-PDBQT: ATOM     70  N   GLC     4      63.576 -40.814 108.933  0.00  0.00    -0.175 NA
+INPUT-LIGAND-PDBQT: ATOM     71  HN  GLC     4      64.225 -40.118 108.539  0.00  0.00     0.150 HD
+INPUT-LIGAND-PDBQT: ATOM     72  S2  GLC     4      63.277 -41.980 107.851  0.00  0.00     0.191 S 
+INPUT-LIGAND-PDBQT: ATOM     73  OS2 GLC     4      64.481 -42.763 107.787  0.00  0.00    -0.575 OA
+INPUT-LIGAND-PDBQT: ATOM     74  OS2 GLC     4      63.043 -41.216 106.687  0.00  0.00    -0.575 OA
+INPUT-LIGAND-PDBQT: ATOM     75  OS2 GLC     4      62.109 -42.686 108.348  0.00  0.00    -0.575 OA
+INPUT-LIGAND-PDBQT: ATOM     76  O3  GLC     4      63.153 -38.026 108.263  0.00  0.00    -0.374 OA
+INPUT-LIGAND-PDBQT: ATOM     77  HO3 GLC     4      62.579 -38.145 107.502  0.00  0.00     0.218 HD
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: TORSDOF 27
+________________________________________________________________________________
+
+Total charge on ligand                               =	-11.000 e
+REMARK  0 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK       I    between atoms: C1_1  and  O4_7 
+REMARK       I    between atoms: C5_2  and  C6_73 
+REMARK       I    between atoms: C2_4  and  O2_66 
+REMARK       I    between atoms: C3_5  and  O3_71 
+REMARK       I    between atoms: C4T_6  and  O4_76 
+REMARK       I    between atoms: O4_7  and  C4_8 
+REMARK       I    between atoms: C5_9  and  C6_14 
+REMARK       I    between atoms: C1T_11  and  O4_20 
+REMARK       I    between atoms: C2_12  and  N_58 
+REMARK       I    between atoms: C3_13  and  O3_64 
+REMARK       I    between atoms: C6_14  and  O6_15 
+REMARK       I    between atoms: O6_15  and  S6_16 
+REMARK       I    between atoms: O4_20  and  C4_21 
+REMARK       I    between atoms: C5_22  and  C6_27 
+REMARK       I    between atoms: C1_24  and  O4_30 
+REMARK       I    between atoms: C2_25  and  O2_51 
+REMARK       I    between atoms: C3_26  and  O3_56 
+REMARK       I    between atoms: O4_30  and  C4_31 
+REMARK       I    between atoms: C5_32  and  C6_37 
+REMARK       I    between atoms: C2_35  and  N_43 
+REMARK       I    between atoms: C3_36  and  O3_49 
+REMARK       I    between atoms: C6_37  and  O6_38 
+REMARK       I    between atoms: O6_38  and  S6_39 
+REMARK       I    between atoms: N_43  and  S2_45 
+REMARK       I    between atoms: O2_51  and  S2_52 
+REMARK       I    between atoms: N_58  and  S2_60 
+REMARK       I    between atoms: O2_66  and  S2_67 
+
+*** No Rotatable Bonds detected in Small Molecule. ***
+
+Number of atoms in ligand:  77
+
+Number of non-hydrogen atoms in ligand:  70
+
+Number of vibrational degrees of freedom of ligand:  225
+
+
+Number of torsional degrees of freedom = 27
+Estimated loss of torsional free energy upon binding = +8.0541 kcal/mol
+
+
+DPF> about 59.386 -34.746 105.660            # small molecule center
+
+Small molecule center of rotation =	(+59.386, -34.746, +105.660)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(-16.682, 2.626, 4.857) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( 0.361, 0.860, -0.341, -0.115 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 27                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 27
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +8.0541 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 25000000                # maximum number of energy evaluations
+
+There will be at most 25000000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> sw_max_its 300                       # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 300 iterations.
+DPF> sw_max_succ 4                        # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                        # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                           # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.01                       # lower bound on rho
+
+rho will never get smaller than 0.010000.
+DPF> ls_search_freq 0.06                  # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> set_psw1                             # set the above pseudo-Solis & Wets parameters
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> ga_run 10                            # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 59.386 -34.746 105.660
+Furthest true ligand atom from "about" center is 10.393 Angstroms (maxrad).
+Number of requested GA dockings = 10 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 10
+Run: 1 Seed: 919783323 1567566023 [ Run 1 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.931
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.030 0.861 0.200 quatxyzw 0.098982 0.098172 -0.269065 -0.952979 center 59.386 -34.746 105.660 ntor 0
+State:	-12.030   0.861   0.200   0.327  0.324 -0.888 -35.280  
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.56 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.44 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.49 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.030331 0.860581 0.200430
+DOCKED: USER    NEWDPF quaternion0 0.098982 0.098172 -0.269065 -0.952979
+DOCKED: USER    NEWDPF axisangle0 0.326634 0.323961 -0.887896 -35.280178
+DOCKED: USER    NEWDPF quat0 0.326634 0.323961 -0.887896 -35.280178
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.934   4.283  -3.974 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.926   6.354  -5.156 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.306   5.654  -3.946 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.871   3.592  -4.989 -0.02 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.667   4.173  -6.309 -0.01 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.762   5.736  -6.238 -0.00 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.487   2.256  -5.021 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.500   1.169  -4.389 -0.22 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.658   1.016  -5.256 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.889   1.658  -3.110 +0.58 -1.89    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.656  -0.038  -4.220 +0.49 -3.23    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.614   3.669  -7.204 -0.05 -0.21    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.524   3.894  -6.997 -0.02 +0.01    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.361   6.428  -5.429 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.815   7.023  -4.447 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.923   6.153  -6.572 +0.00 -0.52    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.543   6.434  -7.452 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.649   6.117  -7.597 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.172   3.735  -2.743 -0.02 -0.75    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.231   4.119  -1.730 -0.01 +0.40    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.392   2.842  -1.392 -0.03 +0.49    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.510   3.142  -0.290 +0.01 -0.74    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.173   3.490   0.970 -0.02 +0.63    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.076   4.738   0.707 -0.05 +0.43    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -13.001   4.522  -0.459 -0.06 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.424   2.327  -2.416 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.543   3.417  -2.818 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.772   3.220  -4.134 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.845   4.358  -4.229 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.821   3.169  -5.091 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.050   1.915  -4.001 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.676   5.303   2.016 -0.08 -0.74    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.417   4.729   2.443 +0.13 +0.71    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.933   6.853   2.193 -0.25 +0.40    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.663   7.476   1.875 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.933   7.218   1.193 -0.04 -1.34    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.299   7.091   3.624 -0.11 -1.02    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.685   5.668  -0.811 -0.05 -0.94    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.696   6.165   0.010 +0.07 +0.54    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.966   2.378   1.370 -0.05 -1.20    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.218   1.222   1.734 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -12.003   0.041   1.230 -0.17 +0.92    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.406  -1.202   1.682 -0.27 -1.58    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.333  -1.359   3.134 -0.05 +0.67    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.373  -0.302   3.600 -0.04 +0.41    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.843   1.121   3.223 -0.09 +0.33    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.549   0.036   1.449 -0.27 +0.93    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.315  -0.368   0.523 +0.30 -4.07    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.030   0.350   2.612 -0.62 -3.16    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.129  -0.375   5.023 -0.05 -0.41    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.653  -0.648   5.427 -0.02 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.879   0.365   4.711 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.631  -0.380   6.909 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.335  -2.023   5.150 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.860   2.048   3.543 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.037   1.632   3.277 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.716  -2.546   3.485 -0.01 -0.79    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.595  -3.631   3.291 -0.06 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -12.010  -4.257   4.669 -0.03 +0.35    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.956  -5.317   4.340 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.392  -6.481   3.607 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.875  -5.918   2.265 -0.13 +0.42    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.868  -4.769   2.569 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.700  -3.282   5.602 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.546  -3.758   7.007 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.946  -3.614   7.783 -0.25 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.962  -4.373   7.084 -0.03 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.622  -4.164   9.157 -0.13 -0.42    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.211  -2.181   7.859 +0.44 -0.40    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.319  -7.068   1.515 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.459  -6.711   1.075 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.335  -7.633   0.388 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.754  -8.866  -0.069 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.280  -6.598  -0.570 -0.11 -2.28    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.620  -7.767   1.051 +0.17 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.279  -4.367   1.351 +0.34 -1.77    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.924  -4.000   0.742 +0.33 +1.65    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 10
+Run: 2 Seed: 1243850297 1234506863 [ Run 2 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.933
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.021 0.849 0.158 quatxyzw 0.096527 0.099268 -0.270122 -0.952818 center 59.386 -34.746 105.660 ntor 0
+State:	-12.021   0.849   0.158   0.318  0.327 -0.890 -35.341  
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.51 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.40 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.54 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.021167 0.849150 0.157814
+DOCKED: USER    NEWDPF quaternion0 0.096527 0.099268 -0.270122 -0.952818
+DOCKED: USER    NEWDPF axisangle0 0.318004 0.327032 -0.889901 -35.340901
+DOCKED: USER    NEWDPF quat0 0.318004 0.327032 -0.889901 -35.340901
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.936   4.255  -4.028 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.929   6.321  -5.219 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.306   5.627  -4.005 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.877   3.561  -5.037 -0.03 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.677   4.136  -6.359 -0.02 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.770   5.700  -6.295 -0.01 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.495   2.225  -5.064 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.508   1.142  -4.424 -0.23 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.669   0.987  -5.286 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.891   1.636  -3.146 +0.43 -1.88    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.664  -0.066  -4.253 +0.53 -3.24    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.628   3.630  -7.249 -0.05 -0.20    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.537   3.856  -7.040 -0.02 +0.00    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.364   6.391  -5.497 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.814   6.990  -4.520 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.931   6.111  -6.641 +0.00 -0.51    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.554   6.392  -7.512 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.661   6.073  -7.659 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.169   3.713  -2.794 -0.02 -0.74    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.225   4.100  -1.785 -0.01 +0.39    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.386   2.823  -1.446 -0.03 +0.50    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.500   3.126  -0.348 +0.01 -0.75    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.158   3.481   0.913 -0.02 +0.62    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.060   4.728   0.648 -0.05 +0.42    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -12.989   4.509  -0.514 -0.07 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.423   2.302  -2.471 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.541   3.389  -2.880 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.775   3.185  -4.198 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.847   4.321  -4.302 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.828   3.132  -5.151 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.055   1.880  -4.063 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.654   5.300   1.957 -0.08 -0.74    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.394   4.729   2.389 +0.13 +0.70    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.908   6.851   2.128 -0.24 +0.40    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.638   7.471   1.803 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.912   7.213   1.130 -0.04 -1.34    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.269   7.096   3.559 -0.10 -1.02    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.673   5.655  -0.869 -0.05 -0.93    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.680   6.155  -0.049 +0.06 +0.53    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.950   2.371   1.320 -0.05 -1.20    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.203   1.216   1.687 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -11.991   0.034   1.191 -0.16 +0.93    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.395  -1.208   1.646 -0.29 -1.60    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.316  -1.359   3.098 -0.05 +0.68    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.353  -0.301   3.556 -0.03 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.822   1.120   3.175 -0.09 +0.33    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.537   0.032   1.416 -0.26 +0.93    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.306  -0.375   0.494 +0.47 -4.10    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.012   0.352   2.578 -0.61 -3.17    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.104  -0.368   4.979 -0.05 -0.42    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.627  -0.642   5.379 -0.02 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.854   0.366   4.656 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.599  -0.367   6.859 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.312  -2.019   5.106 +0.02 -0.78    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.837   2.047   3.487 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.016   1.630   3.220 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.700  -2.546   3.453 -0.01 -0.80    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.581  -3.630   3.266 -0.07 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -11.991  -4.249   4.648 -0.03 +0.36    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.941  -5.310   4.327 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.381  -6.478   3.597 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.868  -5.921   2.251 -0.13 +0.43    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.858  -4.772   2.547 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.676  -3.269   5.579 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.518  -3.740   6.986 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.915  -3.591   7.766 -0.26 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.935  -4.351   7.074 -0.04 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.587  -4.135   9.142 -0.13 -0.42    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.178  -2.157   7.838 +0.38 -0.41    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.317  -7.074   1.503 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.457  -6.721   1.059 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.337  -7.643   0.383 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.759  -8.879  -0.071 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.284  -6.612  -0.580 -0.11 -2.27    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.620  -7.772   1.051 +0.17 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.273  -4.376   1.325 +0.37 -1.79    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.919  -4.011   0.716 +0.34 +1.67    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 10
+Run: 3 Seed: 1677710008 135952077 [ Run 3 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.925
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.082 0.877 0.210 quatxyzw 0.102177 0.090434 -0.264360 -0.954723 center 59.386 -34.746 105.660 ntor 0
+State:	-12.082   0.877   0.210   0.343  0.304 -0.889 -34.615  
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.87 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.70 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.41 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.51 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.081695 0.877222 0.209881
+DOCKED: USER    NEWDPF quaternion0 0.102177 0.090434 -0.264360 -0.954723
+DOCKED: USER    NEWDPF axisangle0 0.343456 0.303984 -0.888612 -34.614674
+DOCKED: USER    NEWDPF quat0 0.343456 0.303984 -0.888612 -34.614674
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.938   4.304  -3.972 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.925   6.378  -5.148 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.321   5.671  -3.947 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.851   3.608  -5.005 -0.02 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.629   4.193  -6.319 -0.01 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.737   5.756  -6.246 -0.00 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.456   2.275  -5.033 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.472   1.179  -4.422 -0.22 +0.84    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.614   1.019  -5.310 -0.12 -1.08    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.887   1.661  -3.149 +0.40 -1.87    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.621  -0.022  -4.241 +0.43 -3.19    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.556   3.685  -7.233 -0.05 -0.21    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.471   3.902  -7.041 -0.01 +0.02    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.356   6.464  -5.393 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.832   7.060  -4.400 +0.01 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.896   6.196  -6.529 +0.00 -0.52    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.502   6.459  -7.454 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.602   6.149  -7.584 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.193   3.751  -2.746 -0.02 -0.74    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.274   4.139  -1.716 -0.02 +0.40    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.431   2.867  -1.367 -0.03 +0.49    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.571   3.172  -0.248 +0.01 -0.75    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.259   3.511   1.001 -0.02 +0.64    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.167   4.753   0.725 -0.04 +0.44    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -13.069   4.532  -0.458 -0.06 +0.47    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.441   2.363  -2.374 -0.02 +0.53    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.561   3.460  -2.757 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.765   3.272  -4.060 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.846   4.418  -4.137 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.797   3.216  -5.035 +0.02 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.036   1.973  -3.918 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.794   5.310   2.025 -0.05 -0.77    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.538   4.729   2.437 +0.16 +0.74    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -13.066   6.857   2.200 -0.27 +0.41    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.795   7.491   1.907 +0.04 -0.82    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -14.051   7.217   1.184 -0.05 -1.37    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.460   7.089   3.626 -0.12 -1.05    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.756   5.674  -0.820 -0.06 -0.95    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.785   6.169   0.003 +0.07 +0.54    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -12.050   2.392   1.384 -0.05 -1.22    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.299   1.241   1.758 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -12.066   0.056   1.238 -0.17 +0.92    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.468  -1.184   1.698 -0.26 -1.58    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.419  -1.344   3.150 -0.05 +0.68    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.475  -0.281   3.636 -0.04 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.950   1.139   3.253 -0.10 +0.34    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.616   0.038   1.429 -0.26 +0.94    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.362  -0.370   0.489 +0.48 -4.09    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.119   0.345   2.584 -0.66 -3.22    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.256  -0.356   5.062 -0.06 -0.42    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.786  -0.619   5.492 -0.03 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -8.007   0.402   4.792 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.792  -0.354   6.974 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.453  -1.991   5.217 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.980   2.072   3.593 -0.04 -0.72    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.149   1.664   3.341 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.799  -2.528   3.509 -0.01 -0.79    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.667  -3.619   3.296 -0.07 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -12.100  -4.251   4.665 -0.03 +0.36    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -13.033  -5.318   4.318 -0.06 -0.78    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.447  -6.476   3.592 -0.09 +0.46    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.910  -5.905   2.260 -0.13 +0.43    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.918  -4.750   2.585 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.814  -3.284   5.588 -0.10 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.682  -3.763   6.995 -0.09 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -14.097  -3.632   7.746 -0.24 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -15.094  -4.397   7.027 -0.03 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.793  -4.182   9.125 -0.11 -0.40    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.374  -2.201   7.822 +0.66 -0.40    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.333  -7.049   1.517 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.468  -6.684   1.093 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.323  -7.619   0.372 -0.34 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.725  -8.846  -0.078 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.259  -6.581  -0.583 -0.11 -2.29    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.620  -7.764   1.011 +0.15 -2.68    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.310  -4.340   1.379 +0.30 -1.77    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.947  -3.976   0.759 +0.31 +1.65    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 10
+Run: 4 Seed: 278046532 1499700862 [ Run 4 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.930
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.020 0.855 0.182 quatxyzw 0.097848 0.099859 -0.270114 -0.952624 center 59.386 -34.746 105.660 ntor 0
+State:	-12.020   0.855   0.182   0.322  0.328 -0.888 -35.414  
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.57 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.44 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.49 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.020042 0.855261 0.181966
+DOCKED: USER    NEWDPF quaternion0 0.097848 0.099859 -0.270114 -0.952624
+DOCKED: USER    NEWDPF axisangle0 0.321710 0.328321 -0.888092 -35.414129
+DOCKED: USER    NEWDPF quat0 0.321710 0.328321 -0.888092 -35.414129
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.936   4.274  -3.994 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.929   6.343  -5.179 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.305   5.645  -3.966 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.878   3.583  -5.004 -0.03 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.678   4.161  -6.325 -0.02 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.771   5.725  -6.256 -0.00 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.495   2.246  -5.035 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.508   1.162  -4.397 -0.22 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.670   1.010  -5.260 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.891   1.653  -3.118 +0.55 -1.88    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.665  -0.046  -4.230 +0.51 -3.23    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.630   3.658  -7.216 -0.05 -0.20    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.539   3.884  -7.006 -0.02 +0.01    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.364   6.414  -5.457 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.813   7.009  -4.479 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.932   6.137  -6.602 +0.00 -0.51    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.555   6.421  -7.472 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.662   6.102  -7.620 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.169   3.728  -2.761 -0.02 -0.74    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.224   4.112  -1.752 -0.01 +0.39    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.385   2.833  -1.416 -0.03 +0.49    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.498   3.134  -0.318 +0.01 -0.74    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.156   3.485   0.944 -0.02 +0.62    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.058   4.733   0.683 -0.05 +0.42    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -12.987   4.517  -0.479 -0.06 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.422   2.316  -2.443 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.541   3.403  -2.850 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.775   3.203  -4.169 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.847   4.339  -4.270 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.829   3.152  -5.121 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.055   1.897  -4.037 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.651   5.301   1.994 -0.09 -0.74    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.391   4.729   2.425 +0.13 +0.70    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.905   6.851   2.170 -0.24 +0.40    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.635   7.472   1.846 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.909   7.217   1.173 -0.04 -1.33    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.265   7.093   3.602 -0.10 -1.02    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.671   5.664  -0.830 -0.05 -0.93    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.678   6.162  -0.009 +0.07 +0.53    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.948   2.374   1.349 -0.05 -1.20    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.201   1.218   1.711 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -11.989   0.037   1.212 -0.16 +0.92    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.393  -1.206   1.664 -0.28 -1.59    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.314  -1.361   3.116 -0.05 +0.68    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.350  -0.305   3.576 -0.03 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.820   1.118   3.199 -0.09 +0.33    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.535   0.035   1.438 -0.26 +0.93    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.305  -0.369   0.516 +0.34 -4.08    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.010   0.352   2.602 -0.61 -3.15    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.101  -0.377   4.998 -0.05 -0.41    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.624  -0.652   5.397 -0.02 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.851   0.359   4.676 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.595  -0.381   6.878 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.309  -2.028   5.120 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.834   2.043   3.513 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.013   1.626   3.245 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.698  -2.549   3.466 -0.01 -0.80    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.580  -3.633   3.277 -0.06 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -11.989  -4.256   4.657 -0.03 +0.35    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.939  -5.316   4.334 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.380  -6.481   3.601 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.867  -5.921   2.255 -0.13 +0.42    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.857  -4.773   2.554 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.674  -3.278   5.592 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.515  -3.753   6.997 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.912  -3.606   7.778 -0.26 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.932  -4.364   7.084 -0.04 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.583  -4.154   9.152 -0.13 -0.42    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.174  -2.172   7.854 +0.37 -0.41    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.317  -7.072   1.504 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.458  -6.718   1.060 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.338  -7.638   0.383 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.760  -8.872  -0.075 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.285  -6.604  -0.577 -0.11 -2.28    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.621  -7.768   1.051 +0.17 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.272  -4.374   1.333 +0.36 -1.78    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.919  -4.006   0.725 +0.34 +1.66    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 10
+Run: 5 Seed: 2086859971 601643090 [ Run 5 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.924
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.078 0.871 0.208 quatxyzw 0.100815 0.090704 -0.264799 -0.954720 center 59.386 -34.746 105.660 ntor 0
+State:	-12.078   0.871   0.208   0.339  0.305 -0.890 -34.616  
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.87 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.72 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.92 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.37 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.56 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.078324 0.870834 0.208290
+DOCKED: USER    NEWDPF quaternion0 0.100815 0.090704 -0.264799 -0.954720
+DOCKED: USER    NEWDPF axisangle0 0.338868 0.304881 -0.890065 -34.615646
+DOCKED: USER    NEWDPF quat0 0.338868 0.304881 -0.890065 -34.615646
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.938   4.287  -3.981 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.926   6.358  -5.163 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.321   5.655  -3.959 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.853   3.589  -5.011 -0.02 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.632   4.171  -6.327 -0.01 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.740   5.734  -6.258 -0.00 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.459   2.256  -5.036 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.475   1.162  -4.421 -0.22 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.617   1.001  -5.307 -0.12 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.888   1.647  -3.149 +0.41 -1.88    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.624  -0.039  -4.238 +0.48 -3.22    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.561   3.661  -7.238 -0.05 -0.21    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.476   3.879  -7.046 -0.01 +0.02    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.357   6.443  -5.409 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.831   7.042  -4.419 +0.01 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.899   6.172  -6.545 +0.00 -0.52    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.505   6.434  -7.468 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.607   6.123  -7.598 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.192   3.737  -2.754 -0.02 -0.74    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.271   4.128  -1.725 -0.02 +0.40    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.428   2.857  -1.374 -0.03 +0.50    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.567   3.163  -0.257 +0.01 -0.75    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.253   3.507   0.991 -0.02 +0.64    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.161   4.747   0.713 -0.04 +0.44    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -13.064   4.525  -0.468 -0.06 +0.47    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.440   2.349  -2.382 -0.02 +0.53    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.560   3.445  -2.769 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.766   3.253  -4.072 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.846   4.398  -4.153 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.799   3.195  -5.046 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.037   1.954  -3.927 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.786   5.308   2.013 -0.05 -0.77    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.530   4.729   2.428 +0.16 +0.74    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -13.057   6.856   2.185 -0.27 +0.41    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.786   7.489   1.888 +0.04 -0.82    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -14.043   7.214   1.169 -0.05 -1.37    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.448   7.092   3.610 -0.12 -1.04    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.751   5.666  -0.831 -0.06 -0.95    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.779   6.163  -0.010 +0.07 +0.54    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -12.044   2.389   1.378 -0.05 -1.22    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.294   1.238   1.755 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -12.062   0.052   1.238 -0.17 +0.92    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.464  -1.187   1.701 -0.26 -1.58    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.413  -1.344   3.153 -0.05 +0.67    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.468  -0.279   3.635 -0.04 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.942   1.139   3.250 -0.10 +0.34    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.612   0.035   1.432 -0.26 +0.94    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.359  -0.374   0.493 +0.46 -4.09    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.113   0.346   2.586 -0.66 -3.22    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.247  -0.351   5.062 -0.06 -0.42    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.776  -0.613   5.490 -0.03 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.998   0.405   4.787 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.781  -0.345   6.972 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.444  -1.987   5.218 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.972   2.074   3.585 -0.04 -0.72    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.141   1.664   3.333 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.793  -2.527   3.515 -0.01 -0.79    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.662  -3.618   3.306 -0.07 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -12.094  -4.246   4.677 -0.03 +0.35    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -13.027  -5.314   4.333 -0.06 -0.78    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.443  -6.474   3.609 -0.09 +0.46    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.908  -5.906   2.276 -0.13 +0.43    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.914  -4.751   2.597 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.806  -3.276   5.598 -0.10 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.672  -3.751   7.006 -0.09 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -14.086  -3.618   7.759 -0.23 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -15.085  -4.384   7.043 -0.03 -0.52    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.781  -4.165   9.138 -0.12 -0.40    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.362  -2.187   7.831 +0.67 -0.40    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.332  -7.052   1.535 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.467  -6.689   1.109 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.324  -7.625   0.392 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.727  -8.853  -0.056 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.261  -6.590  -0.566 -0.11 -2.29    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.620  -7.768   1.033 +0.16 -2.70    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.308  -4.344   1.388 +0.28 -1.76    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.946  -3.982   0.768 +0.30 +1.64    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 10
+Run: 6 Seed: 835449522 49266485 [ Run 6 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.934
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.024 0.859 0.197 quatxyzw -0.098748 -0.099160 0.269577 0.952756 center 59.386 -34.746 105.660 ntor 0
+State:	-12.024   0.859   0.197  -0.325 -0.326  0.888 35.364  
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.49 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.46 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.47 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.024018 0.859382 0.197312
+DOCKED: USER    NEWDPF quaternion0 -0.098748 -0.099160 0.269577 0.952756
+DOCKED: USER    NEWDPF axisangle0 -0.325111 -0.326468 0.887537 35.364279
+DOCKED: USER    NEWDPF quat0 -0.325111 -0.326468 0.887537 35.364279
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.934   4.283  -3.975 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.927   6.354  -5.157 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.305   5.654  -3.947 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.874   3.593  -4.988 -0.02 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.672   4.173  -6.308 -0.02 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.766   5.737  -6.237 -0.00 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.490   2.256  -5.020 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.504   1.170  -4.387 -0.22 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.664   1.019  -5.252 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.889   1.659  -3.107 +0.59 -1.89    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.660  -0.037  -4.219 +0.49 -3.23    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.622   3.671  -7.202 -0.05 -0.20    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.531   3.896  -6.993 -0.02 +0.01    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.362   6.426  -5.433 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.813   7.021  -4.452 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.927   6.151  -6.577 +0.00 -0.52    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.548   6.435  -7.451 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.655   6.116  -7.598 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.169   3.735  -2.744 -0.02 -0.75    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.226   4.118  -1.732 -0.01 +0.40    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.387   2.840  -1.397 -0.03 +0.49    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.503   3.140  -0.296 +0.01 -0.74    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.163   3.488   0.965 -0.02 +0.62    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.066   4.736   0.704 -0.05 +0.43    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -12.993   4.521  -0.460 -0.06 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.422   2.325  -2.423 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.541   3.413  -2.826 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.773   3.216  -4.144 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.845   4.353  -4.241 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.824   3.166  -5.098 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.052   1.911  -4.013 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.662   5.302   2.015 -0.09 -0.74    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.403   4.729   2.443 +0.13 +0.70    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.917   6.852   2.192 -0.25 +0.40    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.647   7.474   1.871 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.920   7.218   1.194 -0.04 -1.34    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.280   7.091   3.624 -0.11 -1.02    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.677   5.668  -0.811 -0.05 -0.94    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.686   6.165   0.011 +0.07 +0.53    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.956   2.377   1.366 -0.05 -1.20    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.208   1.220   1.729 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -11.995   0.040   1.227 -0.16 +0.92    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.399  -1.204   1.678 -0.27 -1.58    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.322  -1.361   3.129 -0.05 +0.67    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.360  -0.304   3.593 -0.04 +0.41    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.830   1.118   3.217 -0.09 +0.33    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.541   0.036   1.449 -0.27 +0.93    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.309  -0.368   0.525 +0.29 -4.07    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.018   0.351   2.613 -0.61 -3.15    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.113  -0.378   5.016 -0.05 -0.41    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.637  -0.652   5.417 -0.02 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.863   0.360   4.699 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.611  -0.384   6.898 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.321  -2.028   5.139 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.846   2.045   3.535 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.023   1.629   3.267 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.705  -2.549   3.479 -0.01 -0.79    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.586  -3.633   3.286 -0.06 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -11.998  -4.258   4.665 -0.03 +0.35    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.946  -5.318   4.339 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.385  -6.482   3.605 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.870  -5.919   2.261 -0.13 +0.42    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.861  -4.772   2.564 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.685  -3.283   5.600 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.528  -3.759   7.004 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.927  -3.614   7.784 -0.25 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.945  -4.372   7.087 -0.04 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.601  -4.164   9.158 -0.13 -0.42    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.191  -2.181   7.861 +0.40 -0.40    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.317  -7.069   1.510 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.457  -6.714   1.068 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.335  -7.634   0.386 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.756  -8.867  -0.073 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.281  -6.599  -0.573 -0.11 -2.28    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.620  -7.767   1.051 +0.17 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.274  -4.370   1.344 +0.35 -1.78    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.920  -4.002   0.736 +0.33 +1.65    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 10
+Run: 7 Seed: 363933866 346459341 [ Run 7 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.932
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.019 0.849 0.156 quatxyzw -0.096426 -0.099593 0.270245 0.952760 center 59.386 -34.746 105.660 ntor 0
+State:	-12.019   0.849   0.156  -0.317 -0.328  0.890 35.363  
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.52 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.40 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.53 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.019415 0.848841 0.156484
+DOCKED: USER    NEWDPF quaternion0 -0.096426 -0.099593 0.270245 0.952760
+DOCKED: USER    NEWDPF axisangle0 -0.317477 -0.327906 0.889767 35.362978
+DOCKED: USER    NEWDPF quat0 -0.317477 -0.327906 0.889767 35.362978
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.936   4.255  -4.029 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.930   6.321  -5.220 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.306   5.626  -4.005 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.878   3.561  -5.037 -0.03 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.680   4.135  -6.360 -0.02 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.772   5.700  -6.295 -0.01 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.496   2.224  -5.064 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.509   1.142  -4.423 -0.23 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.671   0.987  -5.285 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.891   1.636  -3.145 +0.43 -1.88    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.665  -0.066  -4.253 +0.53 -3.24    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.631   3.630  -7.249 -0.05 -0.20    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.540   3.856  -7.039 -0.02 +0.00    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.366   6.391  -5.499 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.814   6.989  -4.523 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.934   6.111  -6.643 +0.00 -0.51    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.557   6.392  -7.513 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.663   6.072  -7.660 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.169   3.713  -2.794 -0.02 -0.74    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.224   4.100  -1.787 -0.01 +0.39    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.385   2.822  -1.448 -0.03 +0.50    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.498   3.126  -0.351 +0.01 -0.75    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.155   3.480   0.911 -0.02 +0.62    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.057   4.728   0.646 -0.05 +0.42    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -12.987   4.508  -0.515 -0.07 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.422   2.302  -2.473 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.541   3.388  -2.883 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.776   3.184  -4.202 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.848   4.320  -4.307 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.829   3.131  -5.154 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.056   1.879  -4.067 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.650   5.300   1.956 -0.08 -0.74    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.390   4.729   2.389 +0.13 +0.70    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.904   6.851   2.127 -0.24 +0.40    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.634   7.471   1.801 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.908   7.213   1.130 -0.03 -1.34    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.264   7.096   3.559 -0.10 -1.02    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.671   5.655  -0.869 -0.05 -0.93    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.678   6.155  -0.050 +0.06 +0.53    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.948   2.371   1.319 -0.05 -1.20    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.200   1.216   1.685 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -11.988   0.034   1.189 -0.16 +0.93    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.392  -1.208   1.645 -0.29 -1.60    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.313  -1.359   3.097 -0.05 +0.68    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.349  -0.301   3.554 -0.03 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.818   1.120   3.172 -0.09 +0.33    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.534   0.032   1.415 -0.26 +0.93    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.304  -0.375   0.494 +0.46 -4.10    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.009   0.352   2.578 -0.61 -3.16    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.099  -0.369   4.976 -0.05 -0.42    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.622  -0.643   5.375 -0.02 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.849   0.366   4.651 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.593  -0.368   6.855 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.307  -2.020   5.102 +0.02 -0.78    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.833   2.047   3.484 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.011   1.629   3.216 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.696  -2.546   3.450 -0.01 -0.80    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.578  -3.630   3.264 -0.07 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -11.987  -4.249   4.647 -0.03 +0.36    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.937  -5.310   4.327 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.378  -6.478   3.596 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.866  -5.921   2.249 -0.13 +0.43    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.856  -4.773   2.545 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.672  -3.269   5.578 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.512  -3.740   6.985 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.909  -3.590   7.766 -0.26 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.929  -4.351   7.075 -0.04 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.580  -4.134   9.142 -0.13 -0.42    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.171  -2.157   7.838 +0.37 -0.41    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.315  -7.075   1.502 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.456  -6.722   1.056 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.336  -7.643   0.382 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.759  -8.879  -0.072 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.284  -6.613  -0.581 -0.11 -2.27    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.619  -7.772   1.051 +0.17 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.271  -4.377   1.322 +0.38 -1.79    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.918  -4.011   0.714 +0.35 +1.67    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 10
+Run: 8 Seed: 1132385022 332625867 [ Run 8 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.924
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.043 0.856 0.179 quatxyzw -0.097822 -0.096399 0.268182 0.953529 center 59.386 -34.746 105.660 ntor 0
+State:	-12.043   0.856   0.179  -0.325 -0.320  0.890 35.072  
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.87 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.72 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.92 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.37 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.55 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.043032 0.856219 0.178502
+DOCKED: USER    NEWDPF quaternion0 -0.097822 -0.096399 0.268182 0.953529
+DOCKED: USER    NEWDPF axisangle0 -0.324663 -0.319941 0.890074 35.071701
+DOCKED: USER    NEWDPF quat0 -0.324663 -0.319941 0.890074 35.071701
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.941   4.264  -4.010 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.933   6.332  -5.198 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.315   5.634  -3.987 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.873   3.568  -5.025 -0.03 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.667   4.145  -6.346 -0.02 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.764   5.709  -6.280 -0.00 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.486   2.233  -5.051 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.500   1.146  -4.419 -0.22 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.655   0.988  -5.290 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.893   1.638  -3.143 +0.44 -1.88    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.653  -0.059  -4.244 +0.52 -3.24    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.610   3.637  -7.243 -0.05 -0.20    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.521   3.860  -7.039 -0.02 +0.01    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.367   6.407  -5.466 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.825   7.006  -4.484 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.925   6.130  -6.607 +0.00 -0.51    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.543   6.403  -7.495 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.647   6.087  -7.637 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.181   3.720  -2.777 -0.02 -0.74    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.244   4.109  -1.762 -0.01 +0.40    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.403   2.834  -1.419 -0.03 +0.50    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.526   3.139  -0.315 +0.01 -0.75    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.193   3.490   0.942 -0.02 +0.63    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.098   4.735   0.672 -0.05 +0.43    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -13.018   4.513  -0.495 -0.06 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.432   2.318  -2.438 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.551   3.407  -2.840 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.775   3.208  -4.153 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.851   4.347  -4.250 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.822   3.152  -5.113 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.052   1.905  -4.014 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.702   5.303   1.978 -0.07 -0.75    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.444   4.729   2.405 +0.14 +0.71    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.963   6.853   2.149 -0.25 +0.41    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.693   7.477   1.833 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.961   7.213   1.145 -0.04 -1.35    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.334   7.095   3.579 -0.11 -1.03    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.704   5.657  -0.853 -0.05 -0.94    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.718   6.157  -0.033 +0.07 +0.54    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.985   2.377   1.343 -0.05 -1.21    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.236   1.224   1.713 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -12.017   0.040   1.211 -0.17 +0.93    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.420  -1.200   1.669 -0.28 -1.59    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.350  -1.353   3.121 -0.05 +0.68    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.393  -0.292   3.587 -0.04 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.865   1.128   3.204 -0.10 +0.34    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.564   0.033   1.425 -0.26 +0.94    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.326  -0.376   0.498 +0.44 -4.09    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.049   0.350   2.585 -0.63 -3.18    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.154  -0.361   5.011 -0.05 -0.42    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.679  -0.630   5.420 -0.03 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.904   0.382   4.703 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.662  -0.357   6.901 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.358  -2.006   5.148 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.885   2.058   3.523 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.060   1.643   3.261 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.732  -2.538   3.478 -0.01 -0.79    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.609  -3.625   3.284 -0.07 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -12.026  -4.247   4.663 -0.03 +0.35    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.970  -5.311   4.335 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.402  -6.476   3.607 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.881  -5.915   2.265 -0.13 +0.42    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.877  -4.764   2.568 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.721  -3.271   5.590 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.570  -3.742   6.997 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.973  -3.599   7.769 -0.25 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.986  -4.362   7.069 -0.03 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.653  -4.143   9.146 -0.13 -0.41    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.241  -2.166   7.840 +0.49 -0.41    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.321  -7.067   1.520 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.461  -6.710   1.081 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.332  -7.637   0.392 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.748  -8.871  -0.060 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.276  -6.605  -0.570 -0.11 -2.28    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.620  -7.771   1.051 +0.17 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.285  -4.365   1.351 +0.34 -1.78    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.929  -4.000   0.738 +0.32 +1.65    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 10
+Run: 9 Seed: 1734030117 145174640 [ Run 9 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.927
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.039 0.853 0.168 quatxyzw -0.097120 -0.097736 0.268794 0.953292 center 59.386 -34.746 105.660 ntor 0
+State:	-12.039   0.853   0.168  -0.322 -0.324  0.890 35.162  
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.87 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.65 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.37 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.56 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.038979 0.853471 0.167680
+DOCKED: USER    NEWDPF quaternion0 -0.097120 -0.097736 0.268794 0.953292
+DOCKED: USER    NEWDPF axisangle0 -0.321536 -0.323575 0.889895 35.161715
+DOCKED: USER    NEWDPF quat0 -0.321536 -0.323575 0.889895 35.161715
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.947   4.260  -4.020 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.941   6.326  -5.210 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.320   5.630  -3.997 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.883   3.564  -5.032 -0.03 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.680   4.139  -6.354 -0.02 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.776   5.703  -6.289 -0.01 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.497   2.228  -5.058 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.510   1.142  -4.423 -0.23 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.667   0.985  -5.290 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.898   1.635  -3.146 +0.44 -1.88    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.664  -0.063  -4.249 +0.53 -3.24    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.626   3.632  -7.247 -0.05 -0.20    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.536   3.856  -7.041 -0.02 +0.00    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.375   6.400  -5.482 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.829   6.999  -4.503 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.937   6.121  -6.625 +0.00 -0.51    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.557   6.397  -7.505 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.663   6.079  -7.649 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.183   3.716  -2.787 -0.02 -0.74    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.243   4.105  -1.775 -0.01 +0.40    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.403   2.829  -1.433 -0.03 +0.50    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.521   3.135  -0.332 +0.01 -0.75    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.185   3.487   0.927 -0.02 +0.63    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.089   4.732   0.659 -0.05 +0.43    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -13.013   4.511  -0.506 -0.07 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.434   2.312  -2.454 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.554   3.400  -2.860 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.783   3.199  -4.175 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.857   4.338  -4.276 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.832   3.144  -5.132 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.060   1.896  -4.038 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.689   5.302   1.967 -0.08 -0.75    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.429   4.729   2.396 +0.14 +0.71    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.948   6.852   2.137 -0.25 +0.41    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.678   7.475   1.817 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.948   7.213   1.136 -0.04 -1.35    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.314   7.096   3.568 -0.11 -1.03    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.698   5.655  -0.862 -0.05 -0.93    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.710   6.156  -0.043 +0.07 +0.53    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.976   2.375   1.331 -0.05 -1.21    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.227   1.222   1.699 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -12.010   0.038   1.200 -0.17 +0.93    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.413  -1.203   1.657 -0.28 -1.60    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.339  -1.354   3.110 -0.05 +0.68    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.380  -0.294   3.572 -0.04 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.851   1.126   3.189 -0.09 +0.34    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.557   0.032   1.420 -0.26 +0.94    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.322  -0.376   0.495 +0.46 -4.09    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.038   0.350   2.581 -0.62 -3.18    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.136  -0.362   4.995 -0.05 -0.42    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.660  -0.632   5.400 -0.02 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.887   0.379   4.680 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.638  -0.358   6.880 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.341  -2.008   5.128 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.870   2.055   3.505 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.046   1.640   3.241 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.721  -2.540   3.466 -0.01 -0.80    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.599  -3.626   3.275 -0.07 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -12.013  -4.247   4.655 -0.03 +0.35    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.959  -5.310   4.331 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.394  -6.476   3.602 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.877  -5.917   2.258 -0.13 +0.43    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.871  -4.766   2.558 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.704  -3.269   5.585 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.549  -3.740   6.991 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.950  -3.595   7.767 -0.25 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.965  -4.357   7.071 -0.03 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.626  -4.138   9.144 -0.13 -0.41    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.216  -2.161   7.838 +0.45 -0.41    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.320  -7.069   1.512 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.461  -6.713   1.071 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.335  -7.640   0.388 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.753  -8.874  -0.065 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.281  -6.608  -0.575 -0.11 -2.27    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.621  -7.772   1.051 +0.18 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.282  -4.368   1.338 +0.36 -1.78    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.928  -4.004   0.727 +0.33 +1.66    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 10
+Run: 10 Seed: 534132106 782429334 [ Run 10 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 25000000 energy evaluations.
+
+Final-Value: -26.930
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -12.024 0.858 0.192 quatxyzw 0.098394 0.099691 -0.269771 -0.952683 center 59.386 -34.746 105.660 ntor 0
+State:	-12.024   0.858   0.192   0.324  0.328 -0.888 -35.392  
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =  -18.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   14.57 fM (femtomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -1.45 kcal/mol
+DOCKED: USER        Electrostatic Energy            =  -25.48 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move rigidligand.pdbqt
+DOCKED: USER    NEWDPF about 59.386000 -34.746000 105.660000
+DOCKED: USER    NEWDPF tran0 -12.023605 0.858166 0.191725
+DOCKED: USER    NEWDPF quaternion0 0.098394 0.099691 -0.269771 -0.952683
+DOCKED: USER    NEWDPF axisangle0 0.323699 0.327966 -0.887501 -35.392036
+DOCKED: USER    NEWDPF quat0 0.323699 0.327966 -0.887501 -35.392036
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  0 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK       I    between atoms: C1_1  and  O4_7 
+DOCKED: REMARK       I    between atoms: C5_2  and  C6_73 
+DOCKED: REMARK       I    between atoms: C2_4  and  O2_66 
+DOCKED: REMARK       I    between atoms: C3_5  and  O3_71 
+DOCKED: REMARK       I    between atoms: C4T_6  and  O4_76 
+DOCKED: REMARK       I    between atoms: O4_7  and  C4_8 
+DOCKED: REMARK       I    between atoms: C5_9  and  C6_14 
+DOCKED: REMARK       I    between atoms: C1T_11  and  O4_20 
+DOCKED: REMARK       I    between atoms: C2_12  and  N_58 
+DOCKED: REMARK       I    between atoms: C3_13  and  O3_64 
+DOCKED: REMARK       I    between atoms: C6_14  and  O6_15 
+DOCKED: REMARK       I    between atoms: O6_15  and  S6_16 
+DOCKED: REMARK       I    between atoms: O4_20  and  C4_21 
+DOCKED: REMARK       I    between atoms: C5_22  and  C6_27 
+DOCKED: REMARK       I    between atoms: C1_24  and  O4_30 
+DOCKED: REMARK       I    between atoms: C2_25  and  O2_51 
+DOCKED: REMARK       I    between atoms: C3_26  and  O3_56 
+DOCKED: REMARK       I    between atoms: O4_30  and  C4_31 
+DOCKED: REMARK       I    between atoms: C5_32  and  C6_37 
+DOCKED: REMARK       I    between atoms: C2_35  and  N_43 
+DOCKED: REMARK       I    between atoms: C3_36  and  O3_49 
+DOCKED: REMARK       I    between atoms: C6_37  and  O6_38 
+DOCKED: REMARK       I    between atoms: O6_38  and  S6_39 
+DOCKED: REMARK       I    between atoms: N_43  and  S2_45 
+DOCKED: REMARK       I    between atoms: O2_51  and  S2_52 
+DOCKED: REMARK       I    between atoms: N_58  and  S2_60 
+DOCKED: REMARK       I    between atoms: O2_66  and  S2_67 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  IDO     1     -12.938   4.280  -3.981 +0.02 +0.47    +0.288 C 
+DOCKED: ATOM      2  C5  IDO     1     -12.932   6.351  -5.164 +0.01 +0.26    +0.253 C 
+DOCKED: ATOM      3  O5  IDO     1     -13.309   5.651  -3.953 +0.01 -0.41    -0.298 OA
+DOCKED: ATOM      4  C2  IDO     1     -13.879   3.590  -4.993 -0.03 +0.35    +0.242 C 
+DOCKED: ATOM      5  C3  IDO     1     -13.679   4.169  -6.313 -0.02 +0.19    +0.194 C 
+DOCKED: ATOM      6  C4T IDO     1     -13.772   5.733  -6.242 -0.00 +0.16    +0.197 C 
+DOCKED: ATOM      7  O2  IDO     1     -13.496   2.253  -5.025 -0.07 -0.44    -0.213 OA
+DOCKED: ATOM      8  S2  IDO     1     -14.509   1.168  -4.389 -0.22 +0.85    +0.272 S 
+DOCKED: ATOM      9  OS2 IDO     1     -15.670   1.016  -5.253 -0.13 -1.09    -0.553 OA
+DOCKED: ATOM     10  OS2 IDO     1     -14.892   1.657  -3.109 +0.59 -1.89    -0.553 OA
+DOCKED: ATOM     11  OS2 IDO     1     -13.665  -0.040  -4.223 +0.50 -3.23    -0.553 OA
+DOCKED: ATOM     12  O3  IDO     1     -14.630   3.667  -7.205 -0.05 -0.20    -0.360 OA
+DOCKED: ATOM     13  HO3 IDO     1     -15.539   3.892  -6.995 -0.02 +0.01    +0.230 HD
+DOCKED: ATOM     14  C6  IDO     1     -11.367   6.423  -5.442 +0.01 +0.22    +0.236 C 
+DOCKED: ATOM     15  O62 IDO     1     -10.817   7.017  -4.462 +0.00 -0.60    -0.626 OA
+DOCKED: ATOM     16  O61 IDO     1     -10.934   6.147  -6.586 +0.00 -0.52    -0.626 OA
+DOCKED: ATOM     17  O4  IDO     1     -13.556   6.431  -7.457 +0.00 -0.23    -0.360 OA
+DOCKED: ATOM     18  HO4 IDO     1     -12.663   6.112  -7.605 +0.01 +0.16    +0.230 HD
+DOCKED: ATOM     19  O4  GLC     2     -13.172   3.733  -2.749 -0.02 -0.75    -0.326 OA
+DOCKED: ATOM     20  C4  GLC     2     -12.228   4.117  -1.739 -0.01 +0.40    +0.176 C 
+DOCKED: ATOM     21  C5  GLC     2     -11.389   2.838  -1.404 -0.03 +0.49    +0.179 C 
+DOCKED: ATOM     22  O5  GLC     2     -10.503   3.138  -0.305 +0.01 -0.74    -0.327 OA
+DOCKED: ATOM     23  C1T GLC     2     -11.161   3.487   0.957 -0.02 +0.62    +0.260 C 
+DOCKED: ATOM     24  C2  GLC     2     -12.064   4.735   0.696 -0.05 +0.43    +0.176 C 
+DOCKED: ATOM     25  C3  GLC     2     -12.992   4.520  -0.466 -0.06 +0.46    +0.166 C 
+DOCKED: ATOM     26  C6  GLC     2     -10.425   2.322  -2.431 -0.03 +0.54    +0.198 C 
+DOCKED: ATOM     27  O6  GLC     2      -9.543   3.410  -2.836 +0.00 -0.41    -0.235 OA
+DOCKED: ATOM     28  S6  GLC     2      -8.777   3.212  -4.154 +0.01 +0.37    +0.252 S 
+DOCKED: ATOM     29  OS6 GLC     2      -7.850   4.349  -4.254 +0.01 -0.61    -0.572 OA
+DOCKED: ATOM     30  OS6 GLC     2      -9.830   3.162  -5.108 +0.03 -0.84    -0.572 OA
+DOCKED: ATOM     31  OS6 GLC     2      -8.056   1.907  -4.024 +0.02 -0.98    -0.572 OA
+DOCKED: ATOM     32  N   GLC     2     -12.658   5.302   2.008 -0.09 -0.74    -0.279 N 
+DOCKED: ATOM     33  HN  GLC     2     -13.398   4.729   2.438 +0.13 +0.70    +0.176 HD
+DOCKED: ATOM     34  S2  GLC     2     -12.913   6.852   2.185 -0.25 +0.40    +0.205 S 
+DOCKED: ATOM     35  OS2 GLC     2     -11.643   7.474   1.862 +0.04 -0.81    -0.578 OA
+DOCKED: ATOM     36  OS2 GLC     2     -13.916   7.218   1.188 -0.04 -1.34    -0.578 OA
+DOCKED: ATOM     37  OS2 GLC     2     -13.274   7.092   3.617 -0.10 -1.02    -0.578 OA
+DOCKED: ATOM     38  O3  GLC     2     -13.677   5.667  -0.816 -0.05 -0.93    -0.380 OA
+DOCKED: ATOM     39  HO3 GLC     2     -13.684   6.164   0.005 +0.07 +0.53    +0.211 HD
+DOCKED: ATOM     40  O4  IDO     3     -11.954   2.376   1.360 -0.05 -1.20    -0.356 OA
+DOCKED: ATOM     41  C4  IDO     3     -11.206   1.220   1.722 -0.09 +0.48    +0.155 C 
+DOCKED: ATOM     42  C5  IDO     3     -11.993   0.039   1.221 -0.16 +0.92    +0.204 C 
+DOCKED: ATOM     43  O5  IDO     3     -11.397  -1.204   1.672 -0.28 -1.59    -0.347 OA
+DOCKED: ATOM     44  C1  IDO     3     -11.319  -1.361   3.124 -0.05 +0.68    +0.239 C 
+DOCKED: ATOM     45  C2  IDO     3     -10.356  -0.305   3.586 -0.03 +0.42    +0.193 C 
+DOCKED: ATOM     46  C3  IDO     3     -10.825   1.118   3.210 -0.09 +0.33    +0.145 C 
+DOCKED: ATOM     47  C6  IDO     3     -13.539   0.036   1.446 -0.26 +0.93    +0.187 C 
+DOCKED: ATOM     48  O62 IDO     3     -14.308  -0.368   0.523 +0.30 -4.07    -0.675 OA
+DOCKED: ATOM     49  O61 IDO     3     -14.015   0.351   2.610 -0.61 -3.15    -0.675 OA
+DOCKED: ATOM     50  O2  IDO     3     -10.107  -0.377   5.008 -0.05 -0.41    -0.262 OA
+DOCKED: ATOM     51  S2  IDO     3      -8.630  -0.652   5.408 -0.02 +0.28    +0.223 S 
+DOCKED: ATOM     52  OS2 IDO     3      -7.857   0.359   4.689 +0.02 -0.73    -0.602 OA
+DOCKED: ATOM     53  OS2 IDO     3      -8.603  -0.383   6.889 +0.01 -0.60    -0.602 OA
+DOCKED: ATOM     54  OS2 IDO     3      -8.315  -2.028   5.130 +0.02 -0.77    -0.602 OA
+DOCKED: ATOM     55  O3  IDO     3      -9.841   2.044   3.526 -0.03 -0.71    -0.409 OA
+DOCKED: ATOM     56  HO3 IDO     3      -9.019   1.628   3.258 +0.03 +0.29    +0.181 HD
+DOCKED: ATOM     57  O4  GLC     4     -10.702  -2.549   3.474 -0.01 -0.79    -0.319 OA
+DOCKED: ATOM     58  C4  GLC     4     -11.583  -3.633   3.282 -0.06 +0.50    +0.183 C 
+DOCKED: ATOM     59  C5  GLC     4     -11.993  -4.257   4.662 -0.03 +0.35    +0.183 C 
+DOCKED: ATOM     60  O5  GLC     4     -12.942  -5.317   4.337 -0.05 -0.77    -0.343 OA
+DOCKED: ATOM     61  C1  GLC     4     -12.382  -6.482   3.603 -0.09 +0.45    +0.169 C 
+DOCKED: ATOM     62  C2  GLC     4     -11.869  -5.920   2.258 -0.13 +0.42    +0.137 C 
+DOCKED: ATOM     63  C3  GLC     4     -10.859  -4.772   2.559 -0.07 +0.49    +0.165 C 
+DOCKED: ATOM     64  C6  GLC     4     -12.679  -3.281   5.597 -0.09 +0.33    +0.205 C 
+DOCKED: ATOM     65  O6  GLC     4     -12.521  -3.757   7.001 -0.08 -0.27    -0.228 OA
+DOCKED: ATOM     66  S6  GLC     4     -13.918  -3.612   7.782 -0.25 +0.22    +0.259 S 
+DOCKED: ATOM     67  OS6 GLC     4     -14.938  -4.370   7.087 -0.04 -0.53    -0.565 OA
+DOCKED: ATOM     68  OS6 GLC     4     -13.591  -4.161   9.156 -0.13 -0.42    -0.565 OA
+DOCKED: ATOM     69  OS6 GLC     4     -14.181  -2.178   7.859 +0.38 -0.41    -0.565 OA
+DOCKED: ATOM     70  N   GLC     4     -11.317  -7.070   1.507 -0.07 -0.51    -0.175 NA
+DOCKED: ATOM     71  HN  GLC     4     -10.458  -6.715   1.064 +0.04 +0.44    +0.150 HD
+DOCKED: ATOM     72  S2  GLC     4     -12.337  -7.635   0.384 -0.33 +0.63    +0.191 S 
+DOCKED: ATOM     73  OS2 GLC     4     -11.758  -8.869  -0.075 -0.03 -1.46    -0.575 OA
+DOCKED: ATOM     74  OS2 GLC     4     -12.284  -6.601  -0.575 -0.11 -2.28    -0.575 OA
+DOCKED: ATOM     75  OS2 GLC     4     -13.620  -7.767   1.051 +0.17 -2.71    -0.575 OA
+DOCKED: ATOM     76  O3  GLC     4     -10.274  -4.371   1.339 +0.36 -1.78    -0.374 OA
+DOCKED: ATOM     77  HO3 GLC     4     -10.921  -4.003   0.731 +0.34 +1.66    +0.218 HD
+DOCKED: ENDROOT
+DOCKED: TORSDOF 27
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 10
+
+RMSD cluster analysis will be performed using the ligand atoms only (77 / 77 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 1,  out of 10 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |    -18.88 |   6 |    -18.88 |  10 |##########
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 1, out of 10 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1      6      -18.88      0.00    124.50           RANKING
+   1      2      2      -18.88      0.05    124.52           RANKING
+   1      3      7      -18.88      0.05    124.52           RANKING
+   1      4      1      -18.88      0.01    124.50           RANKING
+   1      5      4      -18.88      0.02    124.51           RANKING
+   1      6     10      -18.88      0.01    124.50           RANKING
+   1      7      9      -18.87      0.04    124.53           RANKING
+   1      8      3      -18.87      0.10    124.52           RANKING
+   1      9      5      -18.87      0.09    124.52           RANKING
+   1     10      8      -18.87      0.04    124.52           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.00  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =    10.32            at Temperature, T = 298.15 K
+Free energy,        A ~ -1383.11 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =   -18.88 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     4.58 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL        6
+USER    Run = 6
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 10
+USER  
+USER    RMSD from reference structure       = 124.498 A
+USER  
+USER    Estimated Free Energy of Binding    =  -18.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   14.49 fM (femtomolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -26.93 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -1.46 kcal/mol
+USER        Electrostatic Energy            =  -25.47 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +8.05 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/Users/MAX2/Desktop/docking/rigid1.dpf
+USER    NEWDPF move	rigidligand.pdbqt
+USER    NEWDPF about	59.386000 -34.746000 105.660000
+USER    NEWDPF tran0	-12.024018 0.859382 0.197312
+USER    NEWDPF axisangle0	-0.325111 -0.326468 0.887537 35.364279
+USER    NEWDPF quaternion0	-0.098748 -0.099160 0.269577 0.952756
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  IDO     1     -12.934   4.283  -3.975 +0.02 +0.47    +0.288    124.498
+ATOM      2  C5  IDO     1     -12.927   6.354  -5.157 +0.01 +0.26    +0.253    124.498
+ATOM      3  O5  IDO     1     -13.305   5.654  -3.947 +0.01 -0.41    -0.298    124.498
+ATOM      4  C2  IDO     1     -13.874   3.593  -4.988 -0.02 +0.35    +0.242    124.498
+ATOM      5  C3  IDO     1     -13.672   4.173  -6.308 -0.02 +0.19    +0.194    124.498
+ATOM      6  C4T IDO     1     -13.766   5.737  -6.237 -0.00 +0.16    +0.197    124.498
+ATOM      7  O2  IDO     1     -13.490   2.256  -5.020 -0.07 -0.44    -0.213    124.498
+ATOM      8  S2  IDO     1     -14.504   1.170  -4.387 -0.22 +0.85    +0.272    124.498
+ATOM      9  OS2 IDO     1     -15.664   1.019  -5.252 -0.13 -1.09    -0.553    124.498
+ATOM     10  OS2 IDO     1     -14.889   1.659  -3.107 +0.59 -1.89    -0.553    124.498
+ATOM     11  OS2 IDO     1     -13.660  -0.037  -4.219 +0.49 -3.23    -0.553    124.498
+ATOM     12  O3  IDO     1     -14.622   3.671  -7.202 -0.05 -0.20    -0.360    124.498
+ATOM     13  HO3 IDO     1     -15.531   3.896  -6.993 -0.02 +0.01    +0.230    124.498
+ATOM     14  C6  IDO     1     -11.362   6.426  -5.433 +0.01 +0.22    +0.236    124.498
+ATOM     15  O62 IDO     1     -10.813   7.021  -4.452 +0.00 -0.60    -0.626    124.498
+ATOM     16  O61 IDO     1     -10.927   6.151  -6.577 +0.00 -0.52    -0.626    124.498
+ATOM     17  O4  IDO     1     -13.548   6.435  -7.451 +0.00 -0.23    -0.360    124.498
+ATOM     18  HO4 IDO     1     -12.655   6.116  -7.598 +0.01 +0.16    +0.230    124.498
+ATOM     19  O4  GLC     2     -13.169   3.735  -2.744 -0.02 -0.75    -0.326    124.498
+ATOM     20  C4  GLC     2     -12.226   4.118  -1.732 -0.01 +0.40    +0.176    124.498
+ATOM     21  C5  GLC     2     -11.387   2.840  -1.397 -0.03 +0.49    +0.179    124.498
+ATOM     22  O5  GLC     2     -10.503   3.140  -0.296 +0.01 -0.74    -0.327    124.498
+ATOM     23  C1T GLC     2     -11.163   3.488   0.965 -0.02 +0.62    +0.260    124.498
+ATOM     24  C2  GLC     2     -12.066   4.736   0.704 -0.05 +0.43    +0.176    124.498
+ATOM     25  C3  GLC     2     -12.993   4.521  -0.460 -0.06 +0.46    +0.166    124.498
+ATOM     26  C6  GLC     2     -10.422   2.325  -2.423 -0.03 +0.54    +0.198    124.498
+ATOM     27  O6  GLC     2      -9.541   3.413  -2.826 +0.00 -0.41    -0.235    124.498
+ATOM     28  S6  GLC     2      -8.773   3.216  -4.144 +0.01 +0.37    +0.252    124.498
+ATOM     29  OS6 GLC     2      -7.845   4.353  -4.241 +0.01 -0.61    -0.572    124.498
+ATOM     30  OS6 GLC     2      -9.824   3.166  -5.098 +0.03 -0.84    -0.572    124.498
+ATOM     31  OS6 GLC     2      -8.052   1.911  -4.013 +0.02 -0.98    -0.572    124.498
+ATOM     32  N   GLC     2     -12.662   5.302   2.015 -0.09 -0.74    -0.279    124.498
+ATOM     33  HN  GLC     2     -13.403   4.729   2.443 +0.13 +0.70    +0.176    124.498
+ATOM     34  S2  GLC     2     -12.917   6.852   2.192 -0.25 +0.40    +0.205    124.498
+ATOM     35  OS2 GLC     2     -11.647   7.474   1.871 +0.04 -0.81    -0.578    124.498
+ATOM     36  OS2 GLC     2     -13.920   7.218   1.194 -0.04 -1.34    -0.578    124.498
+ATOM     37  OS2 GLC     2     -13.280   7.091   3.624 -0.11 -1.02    -0.578    124.498
+ATOM     38  O3  GLC     2     -13.677   5.668  -0.811 -0.05 -0.94    -0.380    124.498
+ATOM     39  HO3 GLC     2     -13.686   6.165   0.011 +0.07 +0.53    +0.211    124.498
+ATOM     40  O4  IDO     3     -11.956   2.377   1.366 -0.05 -1.20    -0.356    124.498
+ATOM     41  C4  IDO     3     -11.208   1.220   1.729 -0.09 +0.48    +0.155    124.498
+ATOM     42  C5  IDO     3     -11.995   0.040   1.227 -0.16 +0.92    +0.204    124.498
+ATOM     43  O5  IDO     3     -11.399  -1.204   1.678 -0.27 -1.58    -0.347    124.498
+ATOM     44  C1  IDO     3     -11.322  -1.361   3.129 -0.05 +0.67    +0.239    124.498
+ATOM     45  C2  IDO     3     -10.360  -0.304   3.593 -0.04 +0.41    +0.193    124.498
+ATOM     46  C3  IDO     3     -10.830   1.118   3.217 -0.09 +0.33    +0.145    124.498
+ATOM     47  C6  IDO     3     -13.541   0.036   1.449 -0.27 +0.93    +0.187    124.498
+ATOM     48  O62 IDO     3     -14.309  -0.368   0.525 +0.29 -4.07    -0.675    124.498
+ATOM     49  O61 IDO     3     -14.018   0.351   2.613 -0.61 -3.15    -0.675    124.498
+ATOM     50  O2  IDO     3     -10.113  -0.378   5.016 -0.05 -0.41    -0.262    124.498
+ATOM     51  S2  IDO     3      -8.637  -0.652   5.417 -0.02 +0.28    +0.223    124.498
+ATOM     52  OS2 IDO     3      -7.863   0.360   4.699 +0.02 -0.73    -0.602    124.498
+ATOM     53  OS2 IDO     3      -8.611  -0.384   6.898 +0.01 -0.60    -0.602    124.498
+ATOM     54  OS2 IDO     3      -8.321  -2.028   5.139 +0.02 -0.77    -0.602    124.498
+ATOM     55  O3  IDO     3      -9.846   2.045   3.535 -0.03 -0.71    -0.409    124.498
+ATOM     56  HO3 IDO     3      -9.023   1.629   3.267 +0.03 +0.29    +0.181    124.498
+ATOM     57  O4  GLC     4     -10.705  -2.549   3.479 -0.01 -0.79    -0.319    124.498
+ATOM     58  C4  GLC     4     -11.586  -3.633   3.286 -0.06 +0.50    +0.183    124.498
+ATOM     59  C5  GLC     4     -11.998  -4.258   4.665 -0.03 +0.35    +0.183    124.498
+ATOM     60  O5  GLC     4     -12.946  -5.318   4.339 -0.05 -0.77    -0.343    124.498
+ATOM     61  C1  GLC     4     -12.385  -6.482   3.605 -0.09 +0.45    +0.169    124.498
+ATOM     62  C2  GLC     4     -11.870  -5.919   2.261 -0.13 +0.42    +0.137    124.498
+ATOM     63  C3  GLC     4     -10.861  -4.772   2.564 -0.07 +0.49    +0.165    124.498
+ATOM     64  C6  GLC     4     -12.685  -3.283   5.600 -0.09 +0.33    +0.205    124.498
+ATOM     65  O6  GLC     4     -12.528  -3.759   7.004 -0.08 -0.27    -0.228    124.498
+ATOM     66  S6  GLC     4     -13.927  -3.614   7.784 -0.25 +0.22    +0.259    124.498
+ATOM     67  OS6 GLC     4     -14.945  -4.372   7.087 -0.04 -0.53    -0.565    124.498
+ATOM     68  OS6 GLC     4     -13.601  -4.164   9.158 -0.13 -0.42    -0.565    124.498
+ATOM     69  OS6 GLC     4     -14.191  -2.181   7.861 +0.40 -0.40    -0.565    124.498
+ATOM     70  N   GLC     4     -11.317  -7.069   1.510 -0.07 -0.51    -0.175    124.498
+ATOM     71  HN  GLC     4     -10.457  -6.714   1.068 +0.04 +0.44    +0.150    124.498
+ATOM     72  S2  GLC     4     -12.335  -7.634   0.386 -0.33 +0.63    +0.191    124.498
+ATOM     73  OS2 GLC     4     -11.756  -8.867  -0.073 -0.03 -1.46    -0.575    124.498
+ATOM     74  OS2 GLC     4     -12.281  -6.599  -0.573 -0.11 -2.28    -0.575    124.498
+ATOM     75  OS2 GLC     4     -13.620  -7.767   1.051 +0.17 -2.71    -0.575    124.498
+ATOM     76  O3  GLC     4     -10.274  -4.370   1.344 +0.35 -1.78    -0.374    124.498
+ATOM     77  HO3 GLC     4     -10.920  -4.002   0.736 +0.33 +1.65    +0.218    124.498
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=77          # atoms
+AVSFLD: dim2=1           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = C:/Users/MAX2/Desktop/docking/rigid1.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = C:/Users/MAX2/Desktop/docking/rigid1.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = C:/Users/MAX2/Desktop/docking/rigid1.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = C:/Users/MAX2/Desktop/docking/rigid1.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = C:/Users/MAX2/Desktop/docking/rigid1.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = C:/Users/MAX2/Desktop/docking/rigid1.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = C:/Users/MAX2/Desktop/docking/rigid1.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			8:00 40" p.m., 06/04/2023
+
+
+________________________________________________________________________________
+
+C:/Users/MAX2/Desktop/docking/autodock4.exe: Successful Completion on "DESKTOP-I6LD473"
+
+Real= 41m 24.11s,  CPU= 5m 32.34s,  System= 0.22s
+________________________________________________________________________________
+
