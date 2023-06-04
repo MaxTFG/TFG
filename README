@@ -23,17 +23,27 @@ APBS: contains in and output files from https://server.poissonboltzmann.org/apbs
 	- apbs_ligandinput.in: abovementioned conditions
 
 AutoDock: contains AutoDock files using https://ccsb.scripps.edu/mgltools/downloads/
- - Formafiles:
- 	- ligand.pdbqt: ligand in PDBQT form for adequate reading
- 	- receptor.pdbqt: 5EKI in PDBQT form "".
- - Pre_Grid:
-	- grid.gpf: contains grid file
- - Post_Grid:
-	- contains generated receptor maps by autogrid4.exe. 
- - Pre_Dock:
-	- dock.dpf: contains dock file
- - Docking:
-	- dock.dlg: contains docking run by autodock4.exe.
+	 - Formatfiles:
+		- ligand.pdbqt: ligand in PDBQT form for adequate reading
+		- receptor.pdbqt: 5EKI in PDBQT form "".
+	 - Flex_tail (flexible heparin on terminal C):
+		 - Pre_Grid:
+			- grid.gpf: contains grid file
+		 - Post_Grid:
+			- contains generated receptor maps by autogrid4.exe. 
+		 - Pre_Dock:
+			- dock.dpf: contains dock file
+		 - Docking:
+			- dock.dlg: contains docking run by autodock4.exe.
+	 - Flex_pot (flexible heparin on interest zone):
+	 	 - Grid: grid files (with maps)
+		 - Dock: docking files
+	 - Rig_pot (rigid heparin on interest zone):
+	 	 - Grid: grid files (with maps)
+		 - Dock: docking files
+	 - Rig_tail (rigid heparin on terminal C):
+	 	 - Grid: grid files (with maps)
+		 - Dock: docking files
 
 All files have been cleared of water, added Kollmann charges, added missing atoms,
 and charges have been distributed. However, heparin shows too many torsions, which will 
